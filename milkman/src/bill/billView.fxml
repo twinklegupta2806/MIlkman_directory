@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bill.billViewController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dbecee" height="142.0" layoutX="286.0" layoutY="61.0" stroke="#4449cf" strokeType="INSIDE" width="218.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dbecee" height="130.0" layoutX="286.0" layoutY="224.0" stroke="#4662eb" strokeType="INSIDE" width="218.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dbecee" height="67.0" layoutX="285.0" layoutY="415.0" stroke="#5c6edb" strokeType="INSIDE" width="218.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dbecee" height="90.0" layoutX="45.0" layoutY="499.0" stroke="#d3198f" strokeType="INSIDE" width="484.0" />
+      <ListView fx:id="listbox" layoutX="35.0" layoutY="86.0" prefHeight="393.0" prefWidth="180.0" />
+      <Label layoutX="33.0" layoutY="49.0" prefHeight="20.0" prefWidth="133.0" text="CUSTOMER NAME">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="173.0" layoutY="45.0" mnemonicParsing="false" onAction="#dofetch" prefHeight="25.0" prefWidth="62.0" text="&gt;&gt;&gt;">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Label layoutX="344.0" layoutY="64.0" prefHeight="17.0" prefWidth="88.0" text="START DATE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="348.0" layoutY="111.0" prefHeight="17.0" prefWidth="88.0" text="END DATE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="293.0" layoutY="242.0" prefHeight="17.0" prefWidth="49.0" text="C QTY">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="startdate" layoutX="306.0" layoutY="83.0" />
+      <DatePicker fx:id="enddate" layoutX="307.0" layoutY="134.0" />
+      <Button layoutX="308.0" layoutY="165.0" mnemonicParsing="false" onAction="#dogetdays" prefHeight="6.0" prefWidth="83.0" text="GETDAYS">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="lbldays" alignment="CENTER" layoutX="401.0" layoutY="173.0" prefHeight="17.0" prefWidth="88.0" textFill="#c61717">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="404.0" layoutY="242.0" prefHeight="17.0" prefWidth="49.0" text="B QTY">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="292.0" layoutY="285.0" prefHeight="17.0" prefWidth="49.0" text="CPRICE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="403.0" layoutY="285.0" prefHeight="17.0" prefWidth="49.0" text="BPRICE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="293.0" layoutY="323.0" prefHeight="25.0" prefWidth="62.0" text="MOBILE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblmobile" layoutX="367.0" layoutY="327.0" prefHeight="17.0" prefWidth="104.0" textFill="#3a10c6" />
+      <Label fx:id="lblcq" layoutX="344.0" layoutY="244.0" prefHeight="17.0" prefWidth="49.0" textFill="#dd4436">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblcp" layoutX="345.0" layoutY="285.0" prefHeight="17.0" prefWidth="49.0" textFill="#dd4436">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblbq" layoutX="448.0" layoutY="242.0" prefHeight="17.0" prefWidth="49.0" textFill="#dd4436">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblbp" layoutX="456.0" layoutY="285.0" prefHeight="17.0" prefWidth="41.0" textFill="#dd4436">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button layoutX="338.0" layoutY="367.0" mnemonicParsing="false" onAction="#getvariations" text="Get Variations">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="varb" layoutX="418.0" layoutY="455.0" prefHeight="25.0" prefWidth="62.0" textFill="#7d23eb">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <Label layoutX="297.0" layoutY="455.0" prefHeight="25.0" prefWidth="62.0" text="BQTY">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="varc" layoutX="419.0" layoutY="417.0" prefHeight="25.0" prefWidth="62.0" textFill="#7d23eb">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <Label layoutX="297.0" layoutY="417.0" prefHeight="25.0" prefWidth="62.0" text="CQTY">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="214.0" layoutY="507.0" mnemonicParsing="false" onAction="#doformbill" text="GENERATE BILL">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="57.0" layoutY="553.0" prefHeight="25.0" prefWidth="121.0" text="TOTAL AMOUNT">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbltotal" layoutX="206.0" layoutY="549.0" prefHeight="36.0" prefWidth="104.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Button layoutX="384.0" layoutY="550.0" mnemonicParsing="false" onAction="#dosave" prefHeight="30.0" prefWidth="133.0" text="SAVE AND SMS">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Label alignment="CENTER" layoutX="195.0" layoutY="6.0" prefHeight="25.0" prefWidth="133.0" text="BILLING" textFill="#460bd9">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Separator layoutX="1.0" layoutY="38.0" prefHeight="6.0" prefWidth="550.0" />
+   </children>
+</AnchorPane>
